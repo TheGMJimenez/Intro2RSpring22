@@ -1,0 +1,42 @@
+> #Module 3 Assignment :Data Frames
+> #Dated 1-30-22
+> 
+> #The data set below is based on the presidential election during 2016, where it outlined the name of the candidate,
+> #the source of the poll (ABC vs, CBS). 
+> #Discuss your result in your blog. 
+> #Important note, I made up this data, so this data does not reflect what really happened in the election.
+> 
+> #Name of Candidates
+> Name <- c("Jeb", "Donald", "Ted", "Marco" , "Carly", "Hillary", "Berine")
+> #Poll Results
+> ABC.Results <- c(4, 62, 51, 21, 2, 14, 15)
+> CBS.Results <- c(12, 75, 43, 19, 1, 21, 19) 
+> 
+> #Creating a Data Frame
+> Election <- data.frame(Name, ABC.Results, CBS.Results)
+> Election
+     Name ABC.Results CBS.Results
+1     Jeb           4          12
+2  Donald          62          75
+3     Ted          51          43
+4   Marco          21          19
+5   Carly           2           1
+6 Hillary          14          21
+7  Berine          15          19
+> #TEST to see if Data frame was created - Should yeild as True 
+> is.data.frame(Election)
+[1] TRUE
+> #Observing
+> str(Election)
+'data.frame':	7 obs. of  3 variables:
+ $ Name       : chr  "Jeb" "Donald" "Ted" "Marco" ...
+ $ ABC.Results: num  4 62 51 21 2 14 15
+ $ CBS.Results: num  12 75 43 19 1 21 19
+> summary(Election)
+     Name            ABC.Results     CBS.Results   
+ Length:7           Min.   : 2.00   Min.   : 1.00  
+ Class :character   1st Qu.: 9.00   1st Qu.:15.50  
+ Mode  :character   Median :15.00   Median :19.00  
+                    Mean   :24.14   Mean   :27.14  
+                    3rd Qu.:36.00   3rd Qu.:32.00  
+                    Max.   :62.00   Max.   :75.00 
