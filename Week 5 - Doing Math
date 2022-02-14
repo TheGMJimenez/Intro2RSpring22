@@ -1,0 +1,37 @@
+#Post your result and procedure you took on your blog.
+#A good start will be:
+A <- matrix(1:100, nrow=10)  
+B <- matrix(1:1000, nrow=10)
+
+#Transpose A and B  
+t(A)
+t(B)
+
+#create two vectors (a and b)
+a <- c(1:100)
+a
+b <- c (1:1000)
+b
+
+#multiply matrices by vectors with X and Y
+A %*% a
+B %*% b
+
+#re-assign the vectors a and b to equal the number of rows of the column for the corresponding matrix
+a <- matrix(1:10, nrow=2)
+b <- matrix(1:10, nrow=2)
+
+#Multiply the matrix by a matrix hit %*%
+A %*% B
+B %*% A
+
+#Inverse a matrix 
+S <- matrix(1:100, nrow=2)
+solve(S)
+solve(A)
+solve(B)
+
+#check det(Your turn)
+det(S)
+det(A)
+det(B)
