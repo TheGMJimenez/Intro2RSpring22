@@ -1,0 +1,22 @@
+#Testing general Functions
+data(starwars)
+SW<- as.data.frame(starwars)
+head(SW, 6)
+#summary(SW) 
+list(SW, 6)
+
+isS4(SW) # test to see if S4
+isS4(SW$name) #returns False
+
+
+#Example of S3
+s3 <- list(Movie = "The Empire Strikes Back", Year= 1980, IMBRate = 8.7)
+class(s3) <- "Movie Rating"
+s3
+
+#Example of S4
+MovieRate <- setClass("MovieRate", slots=list(Movie = "character", Year="numeric", IMBRate="numeric"))
+s4 <- new("MovieRate", Movie="The Empire Strikes Back", Year=1980, IMBRate=8.7)
+isS4(s4)                
+s4 # Returns True
+
