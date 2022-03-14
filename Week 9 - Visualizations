@@ -1,0 +1,19 @@
+data("chickwts")
+#Surivial of Passengers of the Titanic
+CW <- chickwts
+CW <- data.frame(chickwts)
+
+summary(CW)
+
+#Basic Plot
+plot(CW, col = "Red", main = "Chicken Weight by Feed (Basic Style)")
+
+#Using Lattice
+install.packages("lattice")
+library(lattice)
+xyplot(feed~weight, data=chickwts,type = "p", pch=20, main = "Chicken Weight by Feed (Lattice Style)")
+
+#Using GGplot
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(CW, aes(x = weight, y = feed)) + geom_point() + ggtitle("Chicken Weight by Feed (ggPlot Style)")
